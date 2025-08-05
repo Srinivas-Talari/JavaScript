@@ -8,5 +8,5 @@
 
 // >90% sites using Js to make web pages more dynamic
 
-// Js is a 
+// Js is a case-senstitive language (a & A are not same)
 
