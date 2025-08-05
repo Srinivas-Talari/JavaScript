@@ -27,6 +27,14 @@ console.log(a.repeat(4)) //Hello worldHello worldHello worldHello world
 console.log(a.match('l')) // 2
 console.log(a.valueOf()) // Hello world
 
+// String Interpolation (Making expression integrate inside the strings)
+
+let name = 'Javascript';
+let author = 'Brendan Eich';
+let year = 1995;
+
+console.log(`${name} developed by ${author} in ${year}`) // `` let you add '' and "" in a string
+
 //**
 
 // Both slice and substring are same, but slice accepts negitive values but substring treats as a 0
