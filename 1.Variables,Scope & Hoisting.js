@@ -88,7 +88,7 @@ result(); // Output :- Inside 20
 // Important points :-
 
 //                    .const has a block scope;
-//                    .With let the value can't be re-initialize and re-declared;   
+//                    .With const the value can't be re-initialize and re-declared;   
 //                    .While declaring only intialization should happen;
 
 const f = 30;
