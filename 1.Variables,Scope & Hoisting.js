@@ -8,7 +8,9 @@ var a; // Declaration
 
 a = 20; // Initialization
 
-// a is called as a Identifier and '=' is  assignment operator
+// a is called as a Identifier and '=' is  assignment operator;
+
+// Any value without declaration treated as a Global variable
 
 // Scope
 
