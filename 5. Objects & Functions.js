@@ -16,10 +16,12 @@ b.name = 'python';
 console.log(a) //{ name: 'python', developed: 'Brendan Eich', in: 1995 }
 console.log(b) //{ name: 'python', developed: 'Brendan Eich', in: 1995 }
  
-// Because both objects pointing towards one object so if one changes the others get affected
+// Because both above objects pointing towards one object so if one changes the others get affected
 
 console.log(Object.keys(a)) // display all keys
 console.log(Object.values(a)) // display all values
+
+// Objects values can be accessed by loops also..
 
 // Functions (Exceuting the piece of code whenever we call the function)
 
