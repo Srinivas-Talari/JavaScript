@@ -115,7 +115,6 @@ div.insertAdjacentHTML('beforebegin',' <h4 class="h4">i am h4</h4>') // it adds 
 div.insertAdjacentHTML('afterbegin',' <h4 class="h4">i am h4</h4>') // it adds just after the start of div
 div.insertAdjacentHTML('afterend',' <h4 class="h4">i am h4</h4>') // it adds after the end of the div tag
 
-
 // changing HTML classes
 
 h1.classList.add('heading-1') // we change the class from classList;
