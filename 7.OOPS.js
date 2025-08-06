@@ -47,9 +47,7 @@ class Human {   // class
 }
 
 const abc = new Human ('naresh',75,5.7);
-
 console.log(abc.getName()) // My name is naresh
-
 console.log(abc.setSalary(1000000)) //  Name:-naresh, Salary:-1000000
 
 // Inheritance and extends keywords
