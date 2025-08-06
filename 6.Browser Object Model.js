@@ -80,11 +80,11 @@ document.cookie = "username=John Doe";
 
 // add expiry date for a cookie
 
-document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC";
+document.cookie = "username=John Doe; expires=Thu, 18 Dec 2025 12:00:00 UTC";
 
 // With a path parameter, you can tell the browser what path the cookie belongs to. By default, the cookie belongs to the current page.
 
-document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+document.cookie = "username=John Doe; expires=Thu, 18 Dec 2025 12:00:00 UTC; path=/";
 
 
 
