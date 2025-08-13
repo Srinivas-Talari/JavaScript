@@ -149,6 +149,24 @@ const m = new User('Python');
 r.learn() // i learn JS
 m.learn() // i learn Python
 
+// Higher Order Functions [A function which takes multiple functions as an arguments are called higher order functions]
+
+function higherOrder(fn) {
+    console.log("Before calling fn");
+    fn();
+    console.log("After calling fn");
+}
+
+function greet() {
+    console.log("Hello!");
+}
+
+higherOrder(greet);
+
+// Output for HOC :- Before calling fn
+                    // Hello!
+                    // After calling fn
+
 //   Math function & methods
 
 let a1 = 34;
@@ -362,20 +380,20 @@ console.log(objG) //{name : 'Javascript', Author : 'Brendan Eich' , developedIn 
 
 // Set 
 
-// const fruits = new Set(['apple','mango','grapes']); // create a set
-// console.log(fruits,typeof(fruits)) // { 'apple', 'mango', 'grapes' } object
-// console.log(fruits instanceof (Set)) // true
-// clear()	Removes all the elements from a Map
-//console.log(fruits.has('apple')) //true
-// console.log(fruits.size) // 3
+const fruit = new Set(['apple','mango','grapes']); // create a set
+console.log(fruit,typeof(fruit)) // { 'apple', 'mango', 'grapes' } object
+console.log(fruit instanceof (Set)) // true
+clear()	// Removes all the elements from a Map
+console.log(fruit.has('apple')) //true
+console.log(fruit.size) // 3
 
 
 // const nums = new Set();
 
-// nums.add(1);
-// nums.add(2);
-// nums.add(1);
-// console.log(nums) // { 1, 2 } if we add same values, it will take only first value
+nums.add(1);
+nums.add(2);
+nums.add(1);
+console.log(nums) // { 1, 2 } if we add same values, it will take only first value
 
 // Map 
 
@@ -468,7 +486,105 @@ console.log(typeof jsObj); // object
 
 // JSON → universal data exchange format (language independent)
 
+// Debounce Basic Function
 
+function debounce(func, delay) {
+    let timer;
+    return function(...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => func.apply(this, args), delay);
+    };
+}
+
+// Keywords to remember debounce function
+
+let timer
+clearTimeout(timer)
+setTimeout(() => func.apply(this, args), delay)
+
+// Throttling Basic Function
+
+function throttle(func, limit) {
+    let inThrottle; // execution lock
+    return function(...args) {
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+}
+
+// Keywords to remember Throttling function
+
+let inThrottle
+if (!inThrottle) check
+Inside: setTimeout(() => inThrottle = false, limit)
+
+// Debounce : clear and set new timer
+// Throttle : lock it and unlock it only after lock time finished
+
+
+// API :- Application Programming Interface [acts as a bridge for  sending data from backend to frontend ]
+
+// We create our own API or we can access public API's [some are free and some needed Authentication so that the owner of that particular API, can track our usage of API in our project]
+
+// By default it has a get method, which means get data from the backend, and we have POST,
+
+// Get Method - [Retrieve data]
+
+// No request body.
+// Used to read or fetch data from an API.
+
+async function getDogs () {
+
+   try {
+
+         const response = await fetch('https://dog.ceo/api/breeds/image/random');
+
+         const data = await response.json();
+
+         console.log(data)
+   }catch(error) {
+
+    console.log(error)
+   }
+}
+
+getDogs()
+
+// POST – [Send new data]
+
+// Has a request body.
+// Used to create new data on the server.
+
+fetch('https://api.example.com/users', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ name: 'John', age: 25 })
+});
+
+//  PUT – [Update existing data (replace)]
+
+// Has a request body.
+// Usually replaces the entire resource.
+
+fetch('https://api.example.com/users/1', {
+  method: 'PUT',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ name: 'John', age: 26 })
+});
+
+//  PATCH – [Update existing data (partial)]
+
+// Has a request body.
+// Only updates the given fields.
+
+fetch('https://api.example.com/users/1', {
+  method: 'PATCH',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ age: 27 }) // only age is updated
+});
 
 
 
