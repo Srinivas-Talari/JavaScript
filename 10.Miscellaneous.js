@@ -539,18 +539,13 @@ Inside: setTimeout(() => inThrottle = false, limit)
 async function getDogs () {
 
    try {
-
          const response = await fetch('https://dog.ceo/api/breeds/image/random');
-
          const data = await response.json();
-
          console.log(data)
    }catch(error) {
-
     console.log(error)
    }
 }
-
 getDogs()
 
 // POST – [Send new data]
@@ -585,6 +580,15 @@ fetch('https://api.example.com/users/1', {
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ age: 27 }) // only age is updated
 });
+
+// DELETE – Remove data
+
+// Usually no body (sometimes allowed).
+
+fetch('https://api.example.com/users/1', { method: 'DELETE' });
+
+
+
 
 
 
